@@ -1,0 +1,30 @@
+{% extends 'base.html.twig.' %}
+
+{% block body %}
+    <div class="block">
+        <fieldset>
+            <h1 class="black">Editer L'Experience</h1>
+
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-4">{{ form_row(form.libelle) }}</div>
+                <div class="col-md-4">{{ form_row(form.societe) }}</div>
+                <div class="col-md-4">{{ form_row(form.typeContrat) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">{{ form_row(form.startDate) }}</div>
+                <div class="col-md-2">{{ form_row(form.endDate) }}</div>
+                <div class="col-md-2">{{ form_row(form.description) }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">{{ form_row(form.location) }}</div>
+                <div class="col-md-2">{{ form_row(form.logo) }}</div>
+            </div>
+
+            <button class="button button-primary">Editer</button>
+            {{ form_end(form) }}
+    </div>
+    </fieldset>
+    <br><br><br><br><br><br>
+    {% include ("pages/includes/footer.html.twig") %}
+{% endblock %}

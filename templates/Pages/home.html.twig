@@ -1,0 +1,20 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+    <section id="intro">
+        <div class="intro-overlay"></div>
+        <div class="intro-content">
+            <div class="row2">
+                <div class="col-twelve2">
+                    <h2 class="bleu"> {{ translate('desiredProfession') }} </h2>
+                    <h1 class="mb-4">Lucas Jenvrain</h1>
+                    <p>
+                        <a href="{{ path('presentation') }}" class="button button-primary">{{ translate('moreAboutMe') }}<span class="ion-ios-arrow-round-forward"></span></a>
+                        <a href="mailto:{{ translate('email') }}" class="button button-primary">{{ translate('contactMe') }}<span class="ion-ios-arrow-round-forward"></span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

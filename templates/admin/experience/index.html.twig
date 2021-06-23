@@ -1,0 +1,41 @@
+{% extends 'base.html.twig.' %}
+{% block title 'Gérer les Experiences' %}
+{% block body %}
+
+    <div></div>
+    <h1 class="black">Gérer les Experiences</h1><br><br><br>
+    <div class="block">
+        <fieldset>
+            <table>
+                <thead>
+                <tr>
+                    <th>Libelle</th>
+                    <th>société</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+                {% for experience in experiences %}
+                    <tr>
+                        <td>{{ experience.libelle }}</td>
+                        <td>{{ experience.societe }}</td>
+
+                        <td>
+                            <a href="{{ path('admin.experiences.edit' , {id : experience.id}) }}" class ="btn btn-secondary ">Editer </a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            </table>
+        </fieldset>
+        </tbody>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    {% include ("pages/includes/footer.html.twig") %}
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br><br><br>
+    <section>
+        <h1 class="black">Boutique</h1><br><br>
+    </section>
+
+
+
+    {% for produit in produits %}
+
+            <div class="Bordure">
+
+            <article>
+
+                <aside>
+                    <h1 class="bleu">{{ produit.nom }}</h1>
+                    <h3 class="black">{{ produit.description }}</h3>
+                    <img  src="/images/boutique/{{produit.imagefile}}" height="250" width="300">
+                    <h3 class="black">{{ produit.prix}} €</h3>
+                    <a href="{{ path('panier_add', {'id' : produit.id}) }}" class="" >{{ translate('addToBasket') }}</a>
+                </aside>
+            </article>
+            </div>
+
+        <br>
+                    {% endfor %}
+
+
+            </div>
+        </div>
+
+    {% include ("pages/includes/footer.html.twig") %}
+{% endblock %}

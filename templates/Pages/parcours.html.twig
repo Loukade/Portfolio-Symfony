@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br><br><br>
+    <section>
+        <h1 class="black">Parcours</h1><br><br>
+    </section>
+    <section>
+
+        {% for parcour in parcours %}
+
+
+
+            <span class="bleu" >{{ parcour.annee | date('Y') }} </span>
+
+            <h2 class="black">{{ parcour.diplome }}</h2><br>
+            <img  src="/images/{{parcour.logo}}" width="170" height="100">
+            <p class="black">{{ parcour.etablissement }} - {{ parcour.commune }}</p>
+
+        {% endfor %}
+
+    </section>
+    <br><br><br><br>
+
+    {% include ("pages/includes/footer.html.twig") %}
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section id="about">
+
+        <div class="about-content">
+            <h2 about="" class="white">{{ translate('moreAboutMe') }}</h2>
+            <div class="row2 section-intro">
+                <div class="col-twelve">
+
+                    <br><br>
+
+
+                    <h2>{{ translate('desiredProfession') }}</h2>
+                    <p class="black">{{ translate('speech') }}</p>
+
+                    <li class="d-flex">
+                        <span class ="black">{{ translate('nameLabel') }}:</span>
+                        <span class = "bleu">{{ translate('nameResult') }} </span></li>
+                    <li class="d-flex">
+                        <span class ="black">{{ translate('BirthdayLabel') }}:</span>
+                        <span class = "bleu"> {{ translate('BirthdayResult') }}</span></li>
+                    <li class="d-flex">
+                        <span class ="black">{{ translate('AddressLabel') }}:</span>
+                        <span class = "bleu"> {{ translate('AddressResult') }}</span></li>
+                    </ul>
+                </div>
+
+                <li class="d-flex"><span class ="black">{{ translate('zipLabel') }}:</span>
+                    <span class = "bleu">{{ translate('zipResult') }}</span></li>
+                <li class="d-flex">
+                    <span class ="black">{{ translate('emailLabel') }}:</span>
+                    <span class = "bleu">{{ translate('email') }}</span></li>
+                </ul>
+            </div>
+            <a href="/cv/CV_Lucas_Jenvrain.pdf" class="button button-primary">CV<span class="ion-ios-arrow-round-forward"></span></a>
+
+        </div>
+
+
+
+        <h2 class="black">{{ translate('mySkills') }}</h2><br>
+
+
+        <h2 class="black">{{ translate('Technology') }}</h2>
+        <h4 class="bleu">{{ translate('Symfony') }}</h4>
+        <br>
+        <h2 class="black">{{ translate('SGBD') }}</h2>
+        <h4 class="bleu">{{ translate('SQLSERVER') }}</h4>
+        <h4 class="bleu">{{ translate('MYSQL') }}</h4>
+        <br>
+        <h2  class="black">{{ translate('Front-End') }}</h2>
+        <h4 class="bleu">{{ translate('HTML') }}</h4>
+        <h4 class="bleu">{{ translate('CSS') }}</h4>
+        <br>
+        <h2  class="black">{{ translate('Back-End') }}</h2>
+        <h4 class="bleu">{{ translate('C#') }}</h4>
+        <h4 class="bleu">{{ translate('PHP') }}</h4>
+        <h4 class="bleu">{{ translate('SQL') }}</h4>
+        <br>
+        <h2 class="black">{{ translate('IDE') }}</h2>
+        <h4 class="bleu">{{ translate('VISUAL STUDIO') }}</h4>
+        <h4 class="bleu">{{ translate('JETBRAINS') }}</h4>
+        <br>
+        <h2 class="black">{{ translate('Système') }}</h2>
+        <h4 class="bleu">{{ translate('LINUX') }}</h4>
+        <h4 class="bleu">{{ translate('WINDOWS') }}</h4>
+        <br>
+        <h2 class="black">{{ translate('Langues') }}</h2>
+        <h4 class="bleu">{{ translate('ENGLISH') }}</h4>
+        <h4 class="bleu">{{ translate('FRENCH') }}</h4>
+
+
+
+
+    </section>
+    {% include ("pages/includes/footer.html.twig") %}
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig.' %}
+{% block title 'Gérer les Presentations' %}
+{% block body %}
+
+    <div></div>
+    <h1 class="black">Gérer les Presentations</h1><br><br><br>
+    <div class="block">
+        <fieldset>
+            <table>
+                <thead>
+                <tr>
+                    <th>Travail</th>
+                    <th>Pays</th>
+                    <th>email</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+                {% for presentation in presentations %}
+                    <tr>
+                        <td>{{ presentation.job }}</td>
+                        <td>{{ presentation.country }}</td>
+                        <td>{{ presentation.email }}</td>
+                        <td>
+                            <a href="{{ path('admin.presentations.edit' , {id : presentation.id}) }}" class ="btn btn-secondary ">Editer </a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            </table>
+        </fieldset>
+        </tbody>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    {% include ("pages/includes/footer.html.twig") %}
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br><br><br>
+    <section>
+        <h1 class="black">Réalisations</h1><br><br>
+    </section>
+    <section>
+    {% for realisation in realisations %}
+        <img  src="/images/{{ realisation.filename }}" width="300" height="300">
+<h2 class="black">{{ realisation.titre }}</h2>
+        <p>  {{ realisation.description | raw }}</p>
+        <a href="{{ realisation.lien }}"target="_blank"><span style="color:#00BFFF ;font-weight: bold">{{ realisation.lien }}</a>
+    {% endfor %}
+</section>
+    <br><br><br><br><br><br>
+
+    {% include ("pages/includes/footer.html.twig") %}
+
+{% endblock %}

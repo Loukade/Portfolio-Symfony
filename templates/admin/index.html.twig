@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Gérer' %}
+
+{% block body %}
+    <br><br><br>
+    <section>
+        <h1 class="black">Gérer</h1><br><br>
+    </section>
+
+
+        <a href="{{ path('admin.parcours.index') }}" type="submit" class="button button-primary">Gérer les Parcours</a>
+        <a href="{{ path('admin.presentations.index') }}" type="submit" class="button button-primary">Gérer les Presentations</a>
+        <a href="{{ path('admin.experiences.index') }}" type="submit" class="button button-primary">Gérer les Experiences</a>
+    <a href="{{ path('admin.realisations.index') }}" type="submit" class="button button-primary">Gérer les Réalisations</a>
+    <a href="{{ path('admin.produits.index') }}" type="submit" class="button button-primary">Gérer les Produits</a>
+
+    </form>
+
+
+    {% include ("pages/includes/footer.html.twig") %}
+{% endblock %}

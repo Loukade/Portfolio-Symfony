@@ -1,0 +1,38 @@
+{% extends 'base.html.twig.' %}
+{% block title 'Gérer les parcours' %}
+{% block body %}
+
+<div></div>
+    <h1 class="black">Gérer les parcours</h1><br><br><br>
+<div class="block">
+    <fieldset>
+    <table>
+        <thead>
+        <tr>
+            <th>Diplôme</th>
+            <th>Actions</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+        {% for parcour in parcours %}
+        <tr>
+            <td>{{ parcour.diplome }}</td>
+            <td>
+                <a href="{{ path('admin.parcours.edit' , {id : parcour.id}) }}" class ="btn btn-secondary ">Editer </a>
+            </td>
+        </tr>
+
+    {% endfor %}
+    </table>
+    </fieldset>
+    </tbody>
+</div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    {% include ("pages/includes/footer.html.twig") %}
+
+
+
+
+{% endblock  %}

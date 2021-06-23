@@ -1,0 +1,41 @@
+{% extends 'base.html.twig.' %}
+{% block title 'Gérer les Produits' %}
+{% block body %}
+
+    <div></div>
+    <h1 class="black">Gérer les Produits</h1><br><br><br>
+    <div class="block">
+        <fieldset>
+            <table>
+                <thead>
+                <tr>
+                    <th>nom</th>
+                    <th>prix</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+                {% for produit in produits %}
+                    <tr>
+                        <td>{{ produit.nom }}</td>
+                        <td>{{ produit.prix }}</td>
+
+                        <td>
+                            <a href="{{ path('admin.produits.edit' , {id : produit.id}) }}" class ="btn btn-secondary ">Editer </a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            </table>
+        </fieldset>
+        </tbody>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    {% include ("pages/includes/footer.html.twig") %}
+
+
+
+
+{% endblock  %}

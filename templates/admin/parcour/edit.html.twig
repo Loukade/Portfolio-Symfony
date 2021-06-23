@@ -1,0 +1,25 @@
+{% extends 'base.html.twig.' %}
+
+{% block body %}
+    <div class="block">
+        <fieldset>
+        <h1 class="black">Editer Le parcour</h1>
+
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-4">{{ form_row(form.diplome) }}</div>
+            <div class="col-md-4">{{ form_row(form.annee) }}</div>
+            <div class="col-md-4">{{ form_row(form.etablissement) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">{{ form_row(form.commune) }}</div>
+            <div class="col-md-2">{{ form_row(form.logo) }}</div>
+        </div>
+
+            <button class="button button-primary">Editer</button>
+        {{ form_end(form) }}
+    </div>
+    </fieldset>
+    <br><br><br><br><br><br>
+    {% include ("pages/includes/footer.html.twig") %}
+{% endblock %}

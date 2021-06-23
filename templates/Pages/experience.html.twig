@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br><br><br>
+    <section>
+        <h1 class="black">Experiences</h1><br><br>
+    </section>
+    <section>
+
+
+                {% for experience in experiences %}
+
+
+
+                    <span class="bleu" >{{ experience.startDate|date('m-Y') }}  / {{ experience.endDate|date('m-Y')  }} </span>
+
+                    <h2 class="black">{{ experience.libelle }}</h2>
+                    <span class="position"><i class="ion-ios-pin me-2"></i>{{ experience.societe }} - {{ experience.location }} - {{ experience.typecontrat }}</span><br><br>
+                    <img  src="/images/{{experience.logo}}" width="170" height="100">
+                    <p class="mt-4">{{ experience.description }}</p>
+
+                {% endfor %}
+
+    </section>
+    <br><br><br><br>
+
+    {% include ("pages/includes/footer.html.twig") %}
+
+{% endblock %}
